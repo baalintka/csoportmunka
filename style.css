@@ -1,0 +1,93 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /*Az elem szélessége: width+paddding+border*/
+}
+
+
+main {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 5fr 2fr;
+    grid-template-areas:
+        "h  h   h"
+        "as  a   n"
+        "f   f   f";
+
+}
+
+header,
+nav,
+article,
+aside,
+footer {
+    border-style: solid;
+    border-width: 1px;
+
+
+
+}
+
+header {
+    grid-area: h;
+
+
+}
+
+nav {
+    background-color: tomato;
+    grid-area: n;
+
+
+}
+
+article {
+    grid-area: a;
+
+
+}
+
+aside {
+    background-color: yellowgreen;
+    grid-area: as;
+
+
+}
+
+footer {
+    grid-area: f;
+}
+
+
+
+
+@media screen and (max-width:600px) {
+    main {
+      
+        grid-template-areas:
+            "h  h   h"
+            "n   n   n"
+            "as  a   a"
+            "f   f   f";
+    
+    }
+
+
+    
+}
+
+@media screen and (max-width:400px) {
+    main {
+      
+        grid-template-areas:
+            "h  h   h"
+            "n   n   n"
+            "a  a   a"
+            "as  as  as"
+            "f   f   f";
+    
+    }
+    
+}
+
